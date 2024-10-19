@@ -36,7 +36,7 @@ function App() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get('https://mern-data-visualisation-dashboard-backend.onrender.com', {
+      const response = await axios.get('http://localhost:5000/api/data', {
         params: { ...filters, page, limit: 10 },
       });
       setFilteredData(response.data.data);
